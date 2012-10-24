@@ -11,6 +11,12 @@ from taggit.managers import TaggableManager
 
 
 class Zone(models.Model):
+    """
+    A grouping of administrative areas that is commonly referred to, but is
+    not reflected in our source data.
+    For example, collections of American states may be grouped into "Eastern
+    Seaboard", "Midwest", etc.
+    """
     name = models.CharField('name', max_length=255)
     slug = models.SlugField(max_length=255, unique=True, null=True)
 
@@ -26,6 +32,10 @@ class Zone(models.Model):
 
 
 class WorldBorder(models.Model):
+    """
+    Accommodates data from the Diva-GIS source.
+    [URL]
+    """
     id_0 = models.IntegerField()
     iso = models.CharField('ISO', max_length=3)
     name_0 = models.CharField('name 0', max_length=75)
@@ -42,6 +52,27 @@ class WorldBorder(models.Model):
     remarks_1 = models.CharField('remarks 1', max_length=125)
     shape_leng = models.FloatField()
     shape_area = models.FloatField()
+    id_2 = models.IntegerField()
+    name_2 = models.CharField('name 1', max_length=75)
+    varname_2 = models.CharField('var name 1', max_length=150)
+    nl_name_2 = models.CharField('nl name 1', max_length=50)
+    hasc_2 = models.CharField('hasc 1', max_length=15)
+    cc_2 = models.CharField('cc 1', max_length=15)
+    type_2 = models.CharField('type 1', max_length=50)
+    engtype_2 = models.CharField('engtype 1', max_length=50)
+    validfr_2 = models.CharField('validfr 1', max_length=25)
+    validto_2 = models.CharField('validto 1', max_length=25)
+    remarks_2 = models.CharField('remarks 1', max_length=125)
+    id_3 = models.IntegerField()
+    name_3 = models.CharField('name 1', max_length=75)
+    varname_3 = models.CharField('var name 1', max_length=150)
+    nl_name_3 = models.CharField('nl name 1', max_length=50)
+    hasc_3 = models.CharField('hasc 1', max_length=15)
+    type_3 = models.CharField('type 1', max_length=50)
+    engtype_3 = models.CharField('engtype 1', max_length=50)
+    validfr_3 = models.CharField('validfr 1', max_length=25)
+    validto_3 = models.CharField('validto 1', max_length=25)
+    remarks_3 = models.CharField('remarks 1', max_length=125)
 
     zone = models.ForeignKey(Zone, null=True, blank=True)
 
