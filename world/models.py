@@ -41,38 +41,66 @@ class WorldBorder(models.Model):
     name_0 = models.CharField('name 0', max_length=75)
     id_1 = models.IntegerField()
     name_1 = models.CharField('name 1', max_length=75)
-    varname_1 = models.CharField('var name 1', max_length=150)
-    nl_name_1 = models.CharField('nl name 1', max_length=50)
-    hasc_1 = models.CharField('hasc 1', max_length=15)
-    cc_1 = models.CharField('cc 1', max_length=15)
-    type_1 = models.CharField('type 1', max_length=50)
-    engtype_1 = models.CharField('engtype 1', max_length=50)
-    validfr_1 = models.CharField('validfr 1', max_length=25)
-    validto_1 = models.CharField('validto 1', max_length=25)
-    remarks_1 = models.CharField('remarks 1', max_length=125)
+    varname_1 = models.CharField('var name 1', max_length=150,
+        null=True, blank=True, default='')
+    nl_name_1 = models.CharField('nl name 1', max_length=50,
+        null=True, blank=True, default='')
+    hasc_1 = models.CharField('hasc 1', max_length=15,
+        null=True, blank=True, default='')
+    cc_1 = models.CharField('cc 1', max_length=15,
+        null=True, blank=True, default='')
+    type_1 = models.CharField('type 1', max_length=50,
+        null=True, blank=True, default='')
+    engtype_1 = models.CharField('engtype 1', max_length=50,
+        null=True, blank=True, default='')
+    validfr_1 = models.CharField('validfr 1', max_length=25,
+        null=True, blank=True, default='')
+    validto_1 = models.CharField('validto 1', max_length=25,
+        null=True, blank=True, default='')
+    remarks_1 = models.CharField('remarks 1', max_length=125,
+        null=True, blank=True, default='')
     shape_leng = models.FloatField()
     shape_area = models.FloatField()
-    id_2 = models.IntegerField()
-    name_2 = models.CharField('name 1', max_length=75)
-    varname_2 = models.CharField('var name 1', max_length=150)
-    nl_name_2 = models.CharField('nl name 1', max_length=50)
-    hasc_2 = models.CharField('hasc 1', max_length=15)
-    cc_2 = models.CharField('cc 1', max_length=15)
-    type_2 = models.CharField('type 1', max_length=50)
-    engtype_2 = models.CharField('engtype 1', max_length=50)
-    validfr_2 = models.CharField('validfr 1', max_length=25)
-    validto_2 = models.CharField('validto 1', max_length=25)
-    remarks_2 = models.CharField('remarks 1', max_length=125)
-    id_3 = models.IntegerField()
-    name_3 = models.CharField('name 1', max_length=75)
-    varname_3 = models.CharField('var name 1', max_length=150)
-    nl_name_3 = models.CharField('nl name 1', max_length=50)
-    hasc_3 = models.CharField('hasc 1', max_length=15)
-    type_3 = models.CharField('type 1', max_length=50)
-    engtype_3 = models.CharField('engtype 1', max_length=50)
-    validfr_3 = models.CharField('validfr 1', max_length=25)
-    validto_3 = models.CharField('validto 1', max_length=25)
-    remarks_3 = models.CharField('remarks 1', max_length=125)
+    id_2 = models.IntegerField(null=True, blank=True)
+    name_2 = models.CharField('name 1', max_length=75,
+        null=True, blank=True)
+    varname_2 = models.CharField('var name 1', max_length=150,
+        null=True, blank=True, default='')
+    nl_name_2 = models.CharField('nl name 1', max_length=50,
+        null=True, blank=True, default='')
+    hasc_2 = models.CharField('hasc 1', max_length=15,
+        null=True, blank=True, default='')
+    cc_2 = models.CharField('cc 1', max_length=15,
+        null=True, blank=True, default='')
+    type_2 = models.CharField('type 1', max_length=50,
+        null=True, blank=True, default='')
+    engtype_2 = models.CharField('engtype 1', max_length=50,
+        null=True, blank=True, default='')
+    validfr_2 = models.CharField('validfr 1', max_length=25,
+        null=True, blank=True, default='')
+    validto_2 = models.CharField('validto 1', max_length=25,
+        null=True, blank=True, default='')
+    remarks_2 = models.CharField('remarks 1', max_length=125,
+        null=True, blank=True, default='')
+    id_3 = models.IntegerField(null=True, blank=True)
+    name_3 = models.CharField('name 1', max_length=75,
+        null=True, blank=True, default='')
+    varname_3 = models.CharField('var name 1', max_length=150,
+        null=True, blank=True, default='')
+    nl_name_3 = models.CharField('nl name 1', max_length=50,
+        null=True, blank=True, default='')
+    hasc_3 = models.CharField('hasc 1', max_length=15,
+        null=True, blank=True, default='')
+    type_3 = models.CharField('type 1', max_length=50,
+        null=True, blank=True, default='')
+    engtype_3 = models.CharField('engtype 1', max_length=50,
+        null=True, blank=True, default='')
+    validfr_3 = models.CharField('validfr 1', max_length=25,
+        null=True, blank=True, default='')
+    validto_3 = models.CharField('validto 1', max_length=25,
+        null=True, blank=True, default='')
+    remarks_3 = models.CharField('remarks 1', max_length=125,
+        null=True, blank=True, default='')
 
     zone = models.ForeignKey(Zone, null=True, blank=True)
 
